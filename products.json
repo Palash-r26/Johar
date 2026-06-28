@@ -2,25 +2,25 @@
   "tea": {
     "name": "Johar Authentic Flavoured Tea",
     "description": "Hand-picked from the finest gardens, our authentic flavoured tea brings you the perfect blend of tradition and taste. Enjoy the robust aroma and refreshing experience with every sip.",
-    "price": "₹299.00",
+    "price": "INR 299.00",
     "image": "Photos/tea lady.png"
   },
   "jaggery-masala": {
     "name": "Jaggery Masala",
     "description": "A traditional blend of organic jaggery and rich Indian spices. Perfect to naturally sweeten your beverages while adding a warm, aromatic spice note that boosts immunity.",
-    "price": "₹199.00",
+    "price": "INR 199.00",
     "image": "Photos/jaggrey product.png"
   },
   "cold-coffee": {
     "name": "Cold Coffee Premium Blend",
     "description": "Experience the chilling delight of our premium cold coffee blend. Made with 100% natural coffee beans, it's the perfect companion for a hot summer day.",
-    "price": "₹349.00",
+    "price": "INR 349.00",
     "image": "Photos/cold coffee.png"
   },
   "jaggery-coffee": {
     "name": "Jaggery Coffee",
     "description": "The perfect marriage of robust coffee beans and pure sugarcane jaggery. A healthier alternative that doesn't compromise on the authentic coffee experience.",
-    "price": "₹249.00",
+    "price": "INR 249.00",
     "image": "Photos/Jaggery Coffee.png"
   }
 }

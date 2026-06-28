@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 3. AJAX Product Fetching for Modal
-  const knowMoreBtns = document.querySelectorAll(".btn-know-more");
+  const knowMoreBtns = document.querySelectorAll(".btn-know-more, .btn-know-more-wooden");
   const modal = new bootstrap.Modal(document.getElementById("productModal"));
   
   const modalImage = document.getElementById("modalProductImage");
@@ -69,5 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
           alert("Unable to load product details at this time.");
         });
     });
+  });
+
+  // 4. Accessibility Fix: prevent focus inside modal when it hides
+  const productModalEl = document.getElementById("productModal");
+  productModalEl.addEventListener('hide.bs.modal', () => {
+    // Blurring the active element shifts focus back to body
+    // before Bootstrap applies aria-hidden="true"
+    if (document.activeElement) {
+      document.activeElement.blur();
+    }
   });
 });

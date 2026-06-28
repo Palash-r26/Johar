@@ -52,14 +52,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Wooden Button Style */
 .btn-know-more-wooden {
   background: linear-gradient(180deg, #9b6134, #663d1f);
-  border: 3px solid #4a2810;
-  border-radius: 12px;
+  border: 2px solid #4a2810;
+  border-radius: 8px;
   color: #f6c043;
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  padding: 12px 36px;
+  padding: 8px 16px;
   box-shadow: inset 0px 2px 4px rgba(255,255,255,0.2), 0px 4px 8px rgba(0,0,0,0.4);
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
   transition: transform 0.2s;
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
   color: var(--text-dark) !important;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   position: relative;
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(245, 240, 232, 0.85); /* Low opacity overlay */
+  background-color: rgba(245, 240, 232, 0.85);
   z-index: -1;
 }
 
@@ -200,27 +200,244 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
 }
 
-/* Hero Section */
-.hero-section {
-  height: 100vh;
-  position: relative;
+/* Poster Style System */
+.poster-page {
+  background: #f5f0e8;
   overflow: hidden;
 }
 
-.hero-bg {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+.poster-section {
+  position: relative;
+  min-height: 720px;
+  margin-top: -28px;
+  overflow: visible;
+  background: transparent;
 }
 
-/* Hero Section Images */
-.hero-female {
-  transition: transform 0.3s ease-in-out;
+.poster-section:first-of-type {
+  margin-top: 0;
 }
-.hero-female:hover {
-  transform: translateY(-10px);
+
+.poster-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.intro-tea-section .poster-bg {
+  object-position: center top;
+}
+
+.section-inner {
+  position: absolute;
+  inset: 0;
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.section-copy {
+  max-width: 460px;
+  z-index: 2;
+}
+
+.section-copy h2 {
+  font-size: clamp(2rem, 4.4vw, 4.25rem);
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.section-copy p {
+  max-width: 420px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #5a4030;
+}
+
+/* Specific Placements */
+.hero-fit-section {
+  min-height: auto;
+  height: auto;
+  margin-top: 0;
+  background: transparent;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-fit-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro-tea-section {
+  /* Pulling the section up to beautifully overlap the tea leaves */
+  margin-top: -130px; 
+  position: relative;
+  z-index: 2;
+}
+
+.jaggery-masala-section {
+  position: relative;
+  z-index: 3;
+}
+
+.cold-coffee-section {
+  position: relative;
+  z-index: 4;
+}
+
+/* Make the cold coffee pouch noticeably larger overriding inline styles */
+.cold-coffee-section .section-art img {
+  max-height: 550px !important; 
+  width: auto;
+}
+
+.tea-lady-art {
+  position: absolute;
+  width: min(460px, 42vw);
+  right: 7%;
+  bottom: 7%;
+}
+
+.jaggery-masala-copy {
+  position: absolute;
+  top: 8%;
+  right: 7%;
+  width: min(540px, 42vw);
+  transform: none;
+  text-align: center;
+}
+.jaggery-masala-copy h2 {
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  line-height: 0.9;
+}
+
+/* Coffee Machine Section – sits below section 5 torn paper */
+.simple-machine-section {
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 60px 0 60px;
+  background: #f5f0e8;
+}
+
+/* ── Jaggery Coffee Section ── */
+.jaggery-coffee-section {
+  margin-top: -100px;
+  position: relative;
+  z-index: 6;
+  overflow: visible;
+  background: transparent;
+}
+
+/* Sugarcane sketch sits on top of the torn paper */
+.jaggery-sketch-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* Sugarcane lady – pinned bottom, shifted left from right edge */
+.sg-lady-wrap {
+  position: absolute;
+  right: 18%;
+  bottom: 80px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.sg-lady-img {
+  height: 500px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.18));
+}
+
+/* TOP CENTER copy block */
+.jaggery-top-copy {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  width: min(620px, 80%);
+}
+
+.jaggery-top-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.jaggery-top-copy p {
+  font-size: 0.95rem;
+  color: #5a4030;
+  margin-bottom: 16px;
+}
+
+/* Product bag: absolute bottom-left */
+.jaggery-product-wrap {
+  position: absolute;
+  left: 5%;
+  bottom: 80px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Jaggery Coffee product bag – larger */
+.jaggery-product-img {
+  max-height: 560px;
+  width: auto;
+}
+
+/* Floating jaggery sugar cubes */
+.floating-sugar {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.88;
+}
+
+.floating-sugar img {
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.18));
+}
+
+/* Cubes clustered left – around the product bag */
+.sugar-1 { top: 55%;  left: 6%;   animation: floatSugar 7s   ease-in-out infinite 0s;   transform: rotate(12deg); }
+.sugar-2 { bottom: 8%; left: 14%;  animation: floatSugar 9s   ease-in-out infinite 1.2s; transform: rotate(-18deg); }
+.sugar-3 { bottom: 12%; left: 28%; animation: floatSugar 8s   ease-in-out infinite 2s;   transform: rotate(8deg); }
+.sugar-4 { top: 60%;  left: 38%;  animation: floatSugar 6.5s ease-in-out infinite 0.6s; transform: rotate(-8deg); }
+.sugar-5 { bottom: 6%; left: 42%;  animation: floatSugar 10s  ease-in-out infinite 3s;  transform: rotate(22deg); }
+
+@keyframes floatSugar {
+  0%   { transform: translateY(0px) rotate(var(--r, 12deg)); }
+  50%  { transform: translateY(-12px) rotate(var(--r, 12deg)); }
+  100% { transform: translateY(0px) rotate(var(--r, 12deg)); }
+}
+
+
+.section-six {
+  margin-top: -20px;
+  overflow: visible;
+  position: relative;
+  z-index: 7;
 }
 
 /* Section background image covers */
@@ -292,21 +509,211 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
-/* Media Queries for Mobile */
+/* ═══════════════════════════════════════════
+   RESPONSIVE — TABLET  (768px – 1024px)
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .poster-section {
+    min-height: 560px;
+  }
+
+  .section-inner {
+    width: calc(100% - 32px);
+    gap: 20px;
+  }
+
+  .section-copy h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* Jaggery section – scale absolute elements */
+  .sg-lady-img   { height: 380px; }
+  .jaggery-product-img { max-height: 400px; }
+  .jaggery-coffee-inner { padding-right: 180px; }
+
+  .jaggery-top-copy {
+    top: 90px;
+    width: min(520px, 85%);
+  }
+
+  /* Machine */
+  .simple-machine-section { padding: 40px 0 50px; }
+  .machine-img { max-height: 380px !important; }
+
+  /* Tea lady */
+  .tea-lady-art { max-height: 380px; }
+}
+
+
 @media (max-width: 767.98px) {
-  .text-content h2 {
-    font-size: 2.2rem;
+  .poster-section {
+    min-height: auto !important;
+    overflow: hidden;
   }
   
-  .content-section {
-    padding: 60px 0;
+  /* Restore overlapping negative margins for mobile so transparent png gaps disappear.
+     These must be much smaller than desktop because the images scale down! */
+  .intro-tea-section { margin-top: -30px !important; }
+  .jaggery-masala-section { margin-top: -15px !important; }
+  .cold-coffee-section { margin-top: -15px !important; }
+  .section-six { margin-top: -10px !important; }
+
+  /* Ensure poster background images sit behind text on mobile, rather than pushing it down */
+  .poster-bg {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-position: center top;
+    z-index: 0;
   }
-  
-  .image-content {
-    margin-bottom: 30px;
+
+  /* ── Hide only floating decorations ── */
+  .floating-leaf,
+  .floating-sugar {
+    display: none !important;
   }
-  
-  .floating-leaf {
-    display: none; /* Hide on small screens for cleaner look */
+
+  /* ── Stack the grid ── */
+  .section-inner {
+    position: relative !important;
+    inset: unset !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 40px 20px !important;
+    gap: 16px;
+    z-index: 1; /* ensures it sits OVER the new absolute background */
+  }
+
+  /* ── Tea lady — smaller, below text ── */
+  .tea-lady-art {
+    position: relative !important; /* Fixes absolute overlap */
+    right: auto !important;
+    bottom: auto !important;
+    max-height: 150px !important;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ── Cold coffee product — smaller ── */
+  .cold-coffee-section .section-art img {
+    position: relative !important;
+    max-height: 160px !important;
+    margin: 0 auto;
+  }
+
+  /* ── Coffee machine ── */
+  .simple-machine-section {
+    padding: 20px 0 24px;
+    margin-top: 0 !important;
+  }
+  .machine-img {
+    max-height: 200px !important;
+    width: auto;
+  }
+
+  /* ── Jaggery Coffee Section ── */
+  .jaggery-coffee-section {
+    margin-top: -30px !important; /* Reduced from -60px */
+    background: #f9f5ee !important;
+    min-height: auto !important; 
+    padding-bottom: 40px;
+    display: flex !important;
+    flex-direction: row !important; /* Row + Wrap for side-by-side images */
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+  }
+
+  /* Text block — relative so it flows at the top */
+  .jaggery-top-copy {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important; /* Forces it to take full width and break line */
+    padding: 32px 20px 16px;
+    text-align: center;
+    order: 1; /* explicit flex order */
+  }
+
+  /* Wrap both images below the text using relative flow */
+  .jaggery-product-wrap, .sg-lady-wrap {
+    display: block !important;
+    position: relative !important; /* Removes absolute positioning */
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 10px 15px; /* Spacing between them */
+    transform: none !important;
+    order: 2; /* below text */
+  }
+  .jaggery-product-img {
+    max-height: 140px !important;
+  }
+  .sg-lady-img {
+    height: 150px !important;
+  }
+
+  .jaggery-sketch-overlay { opacity: 0.2; }
+  .jaggery-coffee-inner    { display: none; }
+
+  /* ── General ── */
+  .section-copy {
+    width: 100%;
+    text-align: center !important;
+    order: 1; /* Always text on top */
+  }
+  .section-art {
+    order: 2; /* Always art below text */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  /* ── Jaggery Masala Section (Tractor is in background) ── */
+  .jaggery-masala-section {
+    min-height: auto !important; 
+    padding-top: 420px !important; /* Start text below the locked image height */
+    padding-bottom: 40px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    background-color: #f5f0e8 !important; /* Seamless fallback color */
+  }
+  .jaggery-masala-section .poster-bg {
+    height: 400px !important; /* LOCK image height so tractor stops growing */
+    object-position: center top !important;
+  }
+  .jaggery-masala-copy {
+    position: relative !important;
+    top: auto;
+    right: auto;
+    width: 100%;
+    text-align: center !important;
+    z-index: 2;
+  }
+  /* ── Section 6 (Black bag is in background) ── */
+  .section-six {
+    margin-top: -10px !important;
+    min-height: auto !important; 
+    padding-top: 500px !important; /* Start text below the locked image height */
+    padding-bottom: 40px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    background-color: #f5f0e8 !important;
+  }
+  .section-six .poster-bg {
+    height: 480px !important; /* LOCK image height so the bag stops growing */
+    object-position: 85% top !important;
+  }
+  .section-six .section-copy {
+    z-index: 2;
+  }
+  .navbar {
+    background-color: rgba(245, 240, 232, 0.97) !important;
+    backdrop-filter: blur(10px);
   }
 }
