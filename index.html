@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peace & Wealth | Direct from the fields to your smile's</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Leaf SVG Definitions for reuse -->
+  <svg width="0" height="0" class="visually-hidden">
+    <defs>
+      <g id="leaf-svg">
+        <path d="M12,2 C12,2 4,6 4,14 C4,22 12,26 12,26 C12,26 20,22 20,14 C20,6 12,2 12,2 Z" fill="currentColor"/>
+        <path d="M12,2 L12,26" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand logo" href="#">
+        <span class="logo-peace">PEACE</span> <span class="logo-wealth">WEALTH</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 fw-medium text-dark font-poppins">
+          <li class="nav-item">
+            <a class="nav-link text-warning fw-bold" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Calculators</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 right-nav">
+          <a href="#" class="nav-link fw-medium text-dark">Perfect Login</a>
+          <a href="#" class="cart-icon grid-icon-btn">
+            <i class="bi bi-grid-fill fs-5 text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section position-relative overflow-hidden" style="min-height: 100vh; background-image: url('Photos/Banner fade.jpg'); background-size: cover; background-position: center;">
+    <div class="position-absolute bottom-0 w-100 d-flex justify-content-center align-items-end" style="z-index: 5;">
+      <img src="Photos/female 1.png" alt="Female 1" class="hero-female mx-2" style="width: 25%; max-width: 300px;">
+      <img src="Photos/female 2.png" alt="Female 2" class="hero-female mx-2" style="width: 28%; max-width: 350px;">
+      <img src="Photos/female 3.png" alt="Female 3" class="hero-female mx-2" style="width: 25%; max-width: 300px;">
+    </div>
+  </header>
+
+  <!-- Section 1: Tea / Farmer Intro -->
+  <section class="content-section section-bg-img animate-on-scroll" id="section-1" style="background-image: url('Photos/Section 2.png'); padding: 150px 0; z-index: 6;">
+    <!-- Floating leaves -->
+    <div class="floating-leaf leaf-1"><img src="Photos/leaf.png" alt="leaf" width="120"></div>
+    <div class="floating-leaf leaf-2"><img src="Photos/leaf.png" alt="leaf" width="150"></div>
+    
+    <div class="container">
+      <div class="row align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-5 text-content">
+          <h2>Direct from the fields<br>to your smile's</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+          <button class="btn btn-custom btn-know-more" data-product="tea">KNOW MORE</button>
+        </div>
+        <div class="col-md-7 text-center position-relative image-content">
+          <img src="Photos/tea lady.png" alt="Farmer Woman" class="img-fluid floating-img" style="max-height: 500px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Jaggery Masala -->
+  <section class="content-section section-bg-img animate-on-scroll" id="section-2" style="background-image: url('Photos/section 3.png'); padding: 150px 0; background-position: left center;">
+    <!-- Floating jaggery chunks -->
+    <div class="floating-leaf leaf-3" style="top: 20%; right: 10%;"><img src="Photos/Jaggery.png" alt="jaggery" width="100"></div>
+    <div class="floating-leaf leaf-1" style="bottom: 20%; left: 40%;"><img src="Photos/Jaggery.png" alt="jaggery" width="80"></div>
+    
+    <div class="container">
+      <div class="row">
+        <!-- Text pushed to the right to avoid overlapping the tractor -->
+        <div class="col-md-5 offset-md-7 text-content text-start text-md-end">
+          <h2>Authentic Jaggery<br>Masala Tea</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+          <button class="btn btn-know-more-wooden mt-3" data-product="jaggery-masala">KNOW MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Cold Coffee -->
+  <section class="content-section section-bg-img animate-on-scroll" id="section-3" style="background-image: url('Photos/section 4.png'); padding: 150px 0;">
+    <!-- Floating beans -->
+    <div class="floating-leaf leaf-1"><img src="Photos/coffee.png" alt="bean" width="100" style="opacity: 0.9;"></div>
+    <div class="floating-leaf leaf-2"><img src="Photos/coffee.png" alt="bean" width="130" style="opacity: 0.9; transform: rotate(45deg);"></div>
+    
+    <div class="container">
+      <div class="row align-items-center flex-column-reverse flex-md-row">
+        <div class="col-md-5 text-content">
+          <h2>Refreshing<br>Cold Coffee</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+          <button class="btn btn-know-more-wooden mt-3" data-product="cold-coffee">KNOW MORE</button>
+        </div>
+        <div class="col-md-7 text-center image-content">
+          <img src="Photos/cold coffee.png" alt="Cold Coffee" class="img-fluid floating-img product-glow" style="max-height: 450px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 4: Coffee Machine / Cafe -->
+  <section class="content-section visual-section animate-on-scroll" id="section-4" style="background-image: url('Photos/section 4.png'); padding: 100px 0;">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <img src="Photos/coffee machine.png" alt="Coffee Machine" class="img-fluid machine-img" style="max-height: 600px;">
+    </div>
+  </section>
+
+  <!-- Section 5: Jaggery Coffee -->
+  <section class="content-section section-bg-img animate-on-scroll" id="section-5" style="background-image: url('Photos/section 5.png'); padding: 150px 0;">
+    <div class="container text-center">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-content mx-auto">
+          <h2>Natural<br>Jaggery Coffee</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+          <button class="btn btn-know-more-wooden mt-3" data-product="jaggery-coffee">KNOW MORE</button>
+        </div>
+      </div>
+      
+      <!-- Backdrop for the sugarcane field -->
+      <div class="position-relative mt-5">
+        <img src="Photos/section 5 backdrop.png" class="img-fluid w-100" style="border-radius: 20px; object-fit: cover; max-height: 500px;" alt="Sugarcane field">
+        <div class="position-absolute bottom-0 start-50 translate-middle-x w-100 pb-4">
+          <div class="row align-items-end justify-content-center px-5">
+            <div class="col-5 text-end">
+              <img src="Photos/Jaggery Coffee.png" alt="Jaggery Coffee" class="img-fluid floating-img product-glow" style="max-height: 550px;">
+            </div>
+            <div class="col-5 text-start">
+              <img src="Photos/sg Lady.png" alt="Sugarcane Woman" class="img-fluid" style="max-height: 600px; transform: scale(1.2); transform-origin: bottom left;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Black Tea Sugar -->
+  <section class="content-section section-bg-img animate-on-scroll" id="section-6" style="background-image: url('Photos/section 6 with image.png'); padding: 150px 0;">
+    <!-- Floating sugar cubes -->
+    <div class="floating-leaf leaf-1" style="top: 30%; left: 20%;"><img src="Photos/sugar.png" alt="sugar cube" width="80" style="transform: rotate(15deg);"></div>
+    <div class="floating-leaf leaf-2" style="bottom: 30%; left: 35%;"><img src="Photos/sugar.png" alt="sugar cube" width="100" style="transform: rotate(-25deg);"></div>
+    <div class="floating-leaf leaf-3" style="top: 50%; right: 40%;"><img src="Photos/sugar.png" alt="sugar cube" width="90" style="transform: rotate(45deg);"></div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 text-content text-start">
+          <h2>Premium<br>Black Tea Sugar</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+          <button class="btn btn-know-more-wooden mt-3" data-product="black-tea-sugar">KNOW MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Area -->
+  <footer class="footer-area py-4 text-center">
+    <div class="container">
+      <p class="mb-0 text-muted" style="font-family: 'Poppins', sans-serif;">&copy; 2026 Peace & Wealth. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title font-playfair fw-bold" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-5">
+          <div class="row align-items-center">
+            <div class="col-md-5 text-center mb-4 mb-md-0">
+              <img src="" id="modalProductImage" class="img-fluid modal-img drop-shadow" alt="Product Image">
+            </div>
+            <div class="col-md-7">
+              <h3 id="modalProductName" class="font-playfair fw-bold mb-3" style="color: #3B1F0A;"></h3>
+              <p id="modalProductDesc" class="font-poppins mb-4" style="color: #555;"></p>
+              <div class="d-flex align-items-center justify-content-between">
+                <h4 id="modalProductPrice" class="font-poppins fw-bold mb-0" style="color: #7A4F1A;"></h4>
+                <button class="btn btn-custom">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
